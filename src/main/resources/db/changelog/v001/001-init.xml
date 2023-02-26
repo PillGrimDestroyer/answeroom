@@ -75,6 +75,7 @@
             (
                 id            varchar(36),
                 document_id   varchar(36),
+                expired_at    timestamp,
                 registered_at timestamp default now(),
 
                 primary key (id),
