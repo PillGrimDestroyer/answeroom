@@ -4,7 +4,6 @@ import lombok.Data;
 
 @Data
 public class AuthorizeResponse {
-
     private String email;
     private String company;
     private String subdivision;

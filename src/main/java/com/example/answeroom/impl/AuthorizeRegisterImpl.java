@@ -1,6 +1,7 @@
 package com.example.answeroom.impl;
 
 import com.example.answeroom.model.request.AuthorizationRequest;
+import com.example.answeroom.model.request.RegistrationRequest;
 import com.example.answeroom.model.response.AuthorizeResponse;
 import com.example.answeroom.register.AuthorizeRegister;
 import lombok.RequiredArgsConstructor;
@@ -17,6 +18,11 @@ public class AuthorizeRegisterImpl implements AuthorizeRegister {
 
     @Override
     public AuthorizeResponse authorize(AuthorizationRequest request) {
+        return null;
+    }
+
+    @Override
+    public AuthorizeResponse register(RegistrationRequest request) {
         return null;
     }
 }
