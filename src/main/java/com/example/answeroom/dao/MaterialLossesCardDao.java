@@ -22,4 +22,7 @@ public interface MaterialLossesCardDao {
     @Select("select * from material_losses_card order by id limit #{page.limit} offset #{page.offset}")
     List<MaterialLossesCard> loadPage(@Param("page") Page page);
 
+    @ResultMap("material_losses")
+    @Select("select * from material_losses_card where id = #{id}")
+    MaterialLossesCard findById(@Param("id") String materialLossesCarId);
 }

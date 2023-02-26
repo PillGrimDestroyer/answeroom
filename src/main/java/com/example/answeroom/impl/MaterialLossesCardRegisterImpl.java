@@ -2,13 +2,14 @@ package com.example.answeroom.impl;
 
 import com.example.answeroom.dao.MaterialLossesCardDao;
 import com.example.answeroom.dao.UserDao;
+import com.example.answeroom.exception.MaterialLossesCardNotExistException;
 import com.example.answeroom.exception.UserDoesNotExistException;
 import com.example.answeroom.model.Page;
 import com.example.answeroom.model.dto.MaterialLossesCardDto;
 import com.example.answeroom.model.response.MaterialLossesCardResponse;
+import com.example.answeroom.model.response.MaterialLossesDetailCardResponse;
 import com.example.answeroom.register.MaterialLossesCardRegister;
 import lombok.RequiredArgsConstructor;
-import org.apache.commons.lang3.NotImplementedException;
 import org.springframework.stereotype.Component;
 
 import java.util.stream.Collectors;
@@ -36,14 +37,24 @@ public class MaterialLossesCardRegisterImpl implements MaterialLossesCardRegiste
     }
 
     @Override
-    public void loadDetail(String materialLossesCarId, String userId) {
+    public MaterialLossesDetailCardResponse loadDetail(String materialLossesCarId, String userId) {
         var user = userDao.findById(userId);
 
         if (user == null) {
             throw new UserDoesNotExistException();
         }
 
-        throw new NotImplementedException();
+        var materialLossesCard = materialLossesCardDao.findById(materialLossesCarId);
+
+        if (materialLossesCard == null) {
+            throw new MaterialLossesCardNotExistException();
+        }
+
+        var userCompanyId                      = user.subdivision().company().id();
+        var materialLossesCardCompanyId        = materialLossesCard.company().id();
+        var isUserAndCardHasDifferentCompanyId = !userCompanyId.equals(materialLossesCardCompanyId);
+
+        return MaterialLossesDetailCardResponse.of(materialLossesCard, isUserAndCardHasDifferentCompanyId);
     }
 
 }
