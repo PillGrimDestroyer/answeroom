@@ -9,9 +9,9 @@ import java.util.Date;
 @Accessors(fluent = true)
 public class Subdivision {
 
-    private String id;
-    private String name;
+    private String  id;
+    private String  name;
     private Company company;
-    private Date registeredAt;
+    private Date    registeredAt;
 
 }

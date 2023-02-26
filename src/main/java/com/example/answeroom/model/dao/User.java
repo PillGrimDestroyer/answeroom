@@ -9,12 +9,12 @@ import java.util.Date;
 @Accessors(fluent = true)
 public class User {
 
-    private String id;
-    private String email;
-    private String password;
-    private String firstName;
-    private String lastName;
+    private String      id;
+    private String      email;
+    private String      password;
+    private String      firstName;
+    private String      lastName;
     private Subdivision subdivision;
-    private Date registeredAt;
+    private Date        registeredAt;
 
 }

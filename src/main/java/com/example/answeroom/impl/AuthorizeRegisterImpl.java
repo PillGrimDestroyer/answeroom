@@ -19,8 +19,8 @@ public class AuthorizeRegisterImpl implements AuthorizeRegister {
 
     // region Autowired
 
-    private final IdGenerator idGenerator;
-    private final UserDao userDao;
+    private final IdGenerator    idGenerator;
+    private final UserDao        userDao;
     private final SubdivisionDao subdivisionDao;
 
     // endregion

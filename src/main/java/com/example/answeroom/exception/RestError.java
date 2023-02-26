@@ -2,7 +2,7 @@ package com.example.answeroom.exception;
 
 public class RestError extends RuntimeException {
 
-    public final int statusCode;
+    public final int    statusCode;
     public final String error_type;
 
     public RestError(int statusCode, String message) {

@@ -8,10 +8,10 @@ import java.util.List;
 
 @ToString
 public class ErrStackTrace {
-    public String message;
-    public String className;
-    public String errorType;
-    public List<String> stackTrace = new ArrayList<>();
+    public String        message;
+    public String        className;
+    public String        errorType;
+    public List<String>  stackTrace = new ArrayList<>();
     public ErrStackTrace cause;
 
     public static ErrStackTrace from(Throwable error) {
@@ -30,8 +30,8 @@ public class ErrStackTrace {
 
         if (!isHideStackTrace) {
             for (final StackTraceElement ste : error.getStackTrace()) {
-                StringBuilder sb = new StringBuilder();
-                var moduleName = ste.getModuleName();
+                StringBuilder sb         = new StringBuilder();
+                var           moduleName = ste.getModuleName();
                 if (moduleName != null) {
                     sb.append(moduleName).append('/');
                 }

@@ -11,7 +11,7 @@ import java.util.Date;
 public class MaterialLossesCardDto {
 
     private String documentName;
-    private Date expiredAt;
+    private Date   expiredAt;
 
 
     public static MaterialLossesCardDto of(MaterialLossesCard materialLossesCard) {

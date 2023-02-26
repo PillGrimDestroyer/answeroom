@@ -11,7 +11,7 @@ import java.util.List;
 public class MaterialLossesCardResponse {
 
     private List<MaterialLossesCardDto> materialLossesCards;
-    private boolean hasNext;
+    private boolean                     hasNext;
 
 
     public static MaterialLossesCardResponse of(List<MaterialLossesCardDto> materialLossesCards, boolean hasNext) {

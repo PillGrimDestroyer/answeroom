@@ -11,6 +11,6 @@ public class Company {
 
     private String id;
     private String name;
-    private Date registeredAt;
+    private Date   registeredAt;
 
 }

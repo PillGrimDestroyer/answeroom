@@ -8,29 +8,29 @@ import kz.greetgo.conf.hot.FirstReadEnv;
 @Description("Настройки для управлением подключением к БД")
 public interface DbConfig {
 
-  @Description("Хост postgres")
-  @DefaultStrValue("localhost")
-  @FirstReadEnv("DB_HOST")
-  String host();
+    @Description("Хост postgres")
+    @DefaultStrValue("localhost")
+    @FirstReadEnv("DB_HOST")
+    String host();
 
-  @Description("Порт postgres")
-  @DefaultIntValue(12432)
-  @FirstReadEnv("DB_PORT")
-  int port();
+    @Description("Порт postgres")
+    @DefaultIntValue(12432)
+    @FirstReadEnv("DB_PORT")
+    int port();
 
-  @Description("Имя БД postgres")
-  @DefaultStrValue("answeroom")
-  @FirstReadEnv("DB_NAME")
-  String dbName();
+    @Description("Имя БД postgres")
+    @DefaultStrValue("answeroom")
+    @FirstReadEnv("DB_NAME")
+    String dbName();
 
-  @Description("Имя пользователя в БД для доступа к нему")
-  @DefaultStrValue("answeroom")
-  @FirstReadEnv("DB_USER")
-  String username();
+    @Description("Имя пользователя в БД для доступа к нему")
+    @DefaultStrValue("answeroom")
+    @FirstReadEnv("DB_USER")
+    String username();
 
-  @Description("Пароль доступа к БД")
-  @DefaultStrValue("111")
-  @FirstReadEnv("DB_PASS")
-  String password();
+    @Description("Пароль доступа к БД")
+    @DefaultStrValue("111")
+    @FirstReadEnv("DB_PASS")
+    String password();
 
 }

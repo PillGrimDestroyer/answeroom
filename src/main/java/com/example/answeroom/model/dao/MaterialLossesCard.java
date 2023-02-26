@@ -9,9 +9,10 @@ import java.util.Date;
 @Accessors(fluent = true)
 public class MaterialLossesCard {
 
-    private String id;
+    private String   id;
     private Document document;
-    private Date expiredAt;
-    private Date registeredAt;
+    private Company  company;
+    private Date     expiredAt;
+    private Date     registeredAt;
 
 }
