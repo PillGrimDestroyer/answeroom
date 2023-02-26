@@ -29,10 +29,23 @@ dependencies {
     testImplementation 'org.springframework.boot:spring-boot-starter-test'
 
     // https://mvnrepository.com/artifact/kz.greetgo.conf/greetgo.conf
-    implementation 'kz.greetgo.conf:greetgo.conf:2.0.0'
+    implementation 'kz.greetgo.conf:greetgo.conf:2.0.3'
 
     // https://mvnrepository.com/artifact/com.squareup.okhttp3/okhttp
-    implementation 'com.squareup.okhttp3:okhttp:4.9.2'
+    implementation 'com.squareup.okhttp3:okhttp:4.10.0'
+
+    // https://mvnrepository.com/artifact/org.testng/testng
+    testImplementation 'org.testng:testng:7.7.0'
+
+    // https://mvnrepository.com/artifact/javax.validation/validation-api
+    implementation 'javax.validation:validation-api:2.0.1.Final'
+
+    // https://mvnrepository.com/artifact/org.springframework.boot/spring-boot-starter-validation
+    implementation 'org.springframework.boot:spring-boot-starter-validation:3.0.0'
+
+    // https://mvnrepository.com/artifact/log4j/log4j
+    implementation 'log4j:log4j:1.2.17'
+
 }
 
 tasks.named('test') {
