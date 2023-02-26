@@ -70,8 +70,8 @@
 
     <changeSet author="rshmidt" id="005">
         <sql endDelimiter=";;" splitStatements="true"> <![CDATA[
-            drop table if exists material_losses;;
-            create table material_losses
+            drop table if exists material_losses_card;;
+            create table material_losses_card
             (
                 id            varchar(36),
                 document_id   varchar(36),

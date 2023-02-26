@@ -2,12 +2,12 @@ package com.example.answeroom.dao;
 
 import com.example.answeroom.model.Page;
 import com.example.answeroom.model.dao.Document;
-import com.example.answeroom.model.dao.MaterialLosses;
+import com.example.answeroom.model.dao.MaterialLossesCard;
 import org.apache.ibatis.annotations.*;
 
 import java.util.List;
 
-public interface MaterialLossesDao {
+public interface MaterialLossesCardDao {
 
     // region Sub-queries
 
@@ -19,7 +19,7 @@ public interface MaterialLossesDao {
     @Results(id = "material_losses", value = {
             @Result(property = "document", column = "document_id", javaType = Document.class, one = @One(select = "documentById"))
     })
-    @Select("select * from material_losses order by id limit #{page.limit} offset #{page.offset}")
-    List<MaterialLosses> loadPage(@Param("page") Page page);
+    @Select("select * from material_losses_card order by id limit #{page.limit} offset #{page.offset}")
+    List<MaterialLossesCard> loadPage(@Param("page") Page page);
 
 }

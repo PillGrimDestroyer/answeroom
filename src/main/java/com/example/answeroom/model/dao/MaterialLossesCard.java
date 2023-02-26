@@ -7,7 +7,7 @@ import java.util.Date;
 
 @Data
 @Accessors(fluent = true)
-public class MaterialLosses {
+public class MaterialLossesCard {
 
     private String id;
     private Document document;
