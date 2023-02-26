@@ -54,4 +54,33 @@
             ]]></sql>
     </changeSet>
 
+    <changeSet author="rshmidt" id="004">
+        <sql endDelimiter=";;" splitStatements="true"> <![CDATA[
+            drop table if exists documents;;
+            create table documents
+            (
+                id            varchar(36),
+                name          text,
+                registered_at timestamp default now(),
+
+                primary key (id)
+            );;
+            ]]></sql>
+    </changeSet>
+
+    <changeSet author="rshmidt" id="005">
+        <sql endDelimiter=";;" splitStatements="true"> <![CDATA[
+            drop table if exists material_losses;;
+            create table material_losses
+            (
+                id            varchar(36),
+                document_id   varchar(36),
+                registered_at timestamp default now(),
+
+                primary key (id),
+                constraint fk_material_losses_document foreign key (document_id) references documents (id)
+            );;
+            ]]></sql>
+    </changeSet>
+
 </databaseChangeLog>
