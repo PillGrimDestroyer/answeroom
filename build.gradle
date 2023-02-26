@@ -5,7 +5,7 @@ plugins {
 }
 
 group = 'com.example'
-version = '0.0.1-SNAPSHOT'
+version = '0.0.1'
 sourceCompatibility = '17'
 
 configurations {
@@ -30,6 +30,9 @@ dependencies {
 
     // https://mvnrepository.com/artifact/kz.greetgo.conf/greetgo.conf
     implementation 'kz.greetgo.conf:greetgo.conf:2.0.0'
+
+    // https://mvnrepository.com/artifact/com.squareup.okhttp3/okhttp
+    implementation 'com.squareup.okhttp3:okhttp:4.9.2'
 }
 
 tasks.named('test') {
