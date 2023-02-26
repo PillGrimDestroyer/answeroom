@@ -29,8 +29,8 @@ public class AuthorizeController {
     }
 
     @PostMapping("/register")
-    public AuthorizeResponse register(@Valid @RequestBody RegistrationRequest request) {
-        return authorizeRegister.register(request);
+    public void register(@Valid @RequestBody RegistrationRequest request) {
+        authorizeRegister.register(request);
     }
 
 }

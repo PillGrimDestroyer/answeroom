@@ -7,5 +7,5 @@ import com.example.answeroom.model.response.AuthorizeResponse;
 public interface AuthorizeRegister {
     AuthorizeResponse authorize(AuthorizationRequest request);
 
-    AuthorizeResponse register(RegistrationRequest request);
+    void register(RegistrationRequest request);
 }
