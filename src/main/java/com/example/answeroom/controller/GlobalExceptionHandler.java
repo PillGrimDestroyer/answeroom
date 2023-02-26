@@ -21,7 +21,7 @@ public class GlobalExceptionHandler extends ResponseEntityExceptionHandler {
 
         return ResponseEntity.status(ex.statusCode)
                 .header("error_type", ex.getClass().getSimpleName())
-                .body(ErrStackTrace.from(ex));
+                .body(ErrStackTrace.from(ex, true));
     }
 
     @ExceptionHandler(Exception.class)
