@@ -3,7 +3,7 @@ package com.example.answeroom.impl;
 import com.example.answeroom.dao.SubdivisionDao;
 import com.example.answeroom.dao.UserDao;
 import com.example.answeroom.exception.AuthorizeException;
-import com.example.answeroom.exception.SubdivisionDoesNotExistByIdException;
+import com.example.answeroom.exception.SubdivisionDoesNotExistException;
 import com.example.answeroom.exception.UserAlreadyExistException;
 import com.example.answeroom.model.request.AuthorizationRequest;
 import com.example.answeroom.model.request.RegistrationRequest;
@@ -47,7 +47,7 @@ public class AuthorizeRegisterImpl implements AuthorizeRegister {
         var isSubdivisionExist = subdivisionDao.existById(request.subdivisionId());
 
         if (!isSubdivisionExist) {
-            throw new SubdivisionDoesNotExistByIdException();
+            throw new SubdivisionDoesNotExistException();
         }
 
         userDao.registerNewUser(

@@ -26,6 +26,10 @@ public interface UserDao {
     @Select("select * from users where email = #{email} and password = #{password}")
     User findByEmailAndPassword(@Param("email") String email, @Param("password") String password);
 
+    @ResultMap("user")
+    @Select("select * from users where id = #{id}")
+    User findById(@Param("id") String userId);
+
     @Select("select exists(SELECT 1 FROM users WHERE email = #{email})")
     boolean existByEmail(@Param("email") String email);
 

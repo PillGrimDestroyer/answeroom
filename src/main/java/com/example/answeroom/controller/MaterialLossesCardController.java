@@ -25,4 +25,9 @@ public class MaterialLossesCardController {
         return materialLossesCardRegister.loadPage(page);
     }
 
+    @GetMapping("/detail")
+    public void detail(@RequestParam String materialLossesCarId, @RequestParam String userId) {
+        materialLossesCardRegister.loadDetail(materialLossesCarId, userId);
+    }
+
 }

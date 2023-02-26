@@ -10,6 +10,7 @@ import java.util.Date;
 @Accessors(fluent = true)
 public class MaterialLossesCardDto {
 
+    private String materialLossesCarId;
     private String documentName;
     private Date   expiredAt;
 
@@ -17,6 +18,7 @@ public class MaterialLossesCardDto {
     public static MaterialLossesCardDto of(MaterialLossesCard materialLossesCard) {
         var res = new MaterialLossesCardDto();
 
+        res.materialLossesCarId(materialLossesCard.id());
         res.documentName(materialLossesCard.document().name());
         res.expiredAt(materialLossesCard.expiredAt());
 
